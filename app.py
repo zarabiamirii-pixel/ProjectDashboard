@@ -7,6 +7,8 @@ from dash.dash_table import DataTable
 import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly.express as px
+import datetime
+print("BUILD TIME:", datetime.datetime.now())
 
 
 # ---------- Sample data ----------
@@ -340,6 +342,7 @@ def stat_number(value: str) -> html.H3:
 
 
 app.layout = html.Div(
+    
     style={
         "minHeight": "100vh",
         "background": "radial-gradient(circle at top left, #111827 0, #020617 45%, #020617 100%)",
@@ -347,7 +350,8 @@ app.layout = html.Div(
         "boxSizing": "border-box",
         "fontFamily": "Vazirmatn, sans-serif",
     },
-    children=[
+    children=[html.H1("RENDER TEST 5555"),
+
         html.Link(
             rel="stylesheet",
             href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap",
